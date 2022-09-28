@@ -20,7 +20,7 @@
     <p>行内js</p>
     <input type="button" value="内联测试" onclick="alert('Test')" />
 
-    <input type="text" id="btn" value="HelloWorld!">
+    <input type="button" id="btn" value="HelloWorld!">
     <p>内联js</p>
     <script>
         // alert('Js内联')
@@ -50,6 +50,63 @@
     console.warn("Hello Warn");
     console.error("Hello Error");
 </script>
+
+<p>流程控制</p>
+<script>
+    var a = 10;
+    var b = 20;
+    if (a > b) {
+        console.log("a>b");
+    } else if (a == b) {
+        console.log("a==b");
+    } else {
+        console.log("a<b");
+    }
+
+    var c = 10;
+    switch (c) {
+        case 1:
+            console.log("c=1");
+            break;
+        case 2:
+            console.log("c=2");
+            break;
+        case 3:
+            console.log("c=3");
+            break;
+        default:
+            console.log("c!=1,2,3");
+            break;
+    }
+
+    var d = 10;
+    while (d > 0) {
+        console.log(d);
+        d--;
+    }
+
+    var e = 10;
+    do {
+        console.log(e);
+        e--;
+    } while (e > 0);
+
+    for (var f = 0; f < 10; f++) {
+        console.log(f);
+    }
+
+    var g = 10;
+    for (; g > 0; g--) {
+        console.log(g);
+    }
+
+    var h = 10;
+    for (; h > 0;) {
+        console.log(h);
+        h--;
+    }
+</script>
+
 </body>
 
 </html>
