@@ -2,6 +2,8 @@
 title: 02-开始写JavaScript：hello world
 ---
 
+![](img/20220928165823.png) 
+
 ## 开始写第一行 JavaScript：hello world
 
 JS 代码的书写位置在哪里呢？这个问题，也可以理解成：引入 JS 代码，有哪几种方式？有三种方式：（和 CSS 的引入方式类似）
@@ -110,10 +112,15 @@ JS 代码的书写位置在哪里呢？这个问题，也可以理解成：引�
 
 ```html
 <head>
-  window.onload = function(){
-    // 这里可以写操作界面元素的JS代码，等页面加载完毕后再执行
-    ...
-  }
+    <script>
+        window.onload=function(){
+            // 这里可以写操作界面元素的JS代码，等页面加载完毕后再执行
+            var btn=document.getElementById("btn");
+            btn.onclick=function(){
+                alert("Hello World!");
+            }
+        }
+    </script>
 </head>
 ```
 

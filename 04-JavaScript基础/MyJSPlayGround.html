@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTest</title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            btn.onclick = function () {
+                alert("Hello World!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>行内js</p>
+    <input type="button" value="内联测试" onclick="alert('Test')" />
+
+    <input type="text" id="btn" value="HelloWorld!">
+    <p>内联js</p>
+    <script>
+        // alert('Js内联')
+    </script>
+    <p>外联js</p>
+    <!-- <script src="./MyJSPlayGround.js"></script> -->
+
+    <p>HTML注释</p>
+    <!-- 单行注释 -->
+    <p>CSS注释</p>
+    <style>
+        /* 单行注释 */
+    </style>
+    <p>JS注释</p>
+    <script>
+        // 单行注释
+        /*
+        多行注释
+        */
+    </script>
+    <p>如何将js放到head中？</p>
+    <!-- JS在body中按照从上到下顺序执行，直接放到head中不会执行 -->
+    <!-- 使用window.onload可以在网页加载完成后，在head中定义网页元素操作 -->
+
+<script>
+    console.log("Hello Log");
+    console.warn("Hello Warn");
+    console.error("Hello Error");
+</script>
+</body>
+
+</html>
