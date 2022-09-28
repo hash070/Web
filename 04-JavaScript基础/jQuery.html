@@ -30,24 +30,47 @@
         //     }
         // }
 
-        //jQuery写法
+        // //jQuery写法
+        // //文档组件加载之后，图片加载之前执行
+        // $(document).ready(() => {
+        //     $("#MyButton").click(() => {
+        //         $("div").css("background-color", "red");
+        //     });
+        // });
+        // //文档和图片等资源全部加在完毕后再执行
+        // $(window).ready(() => {
+        //     console.log("window ready");
+        // });
+
         $(document).ready(() => {
-            $("#MyButton").click(() => {
-                $("div").css("background-color", "red");
-            });
-        });
+            let divs = document.getElementsByTagName("divs");
+
+            let MyButton = document.getElementById("MyButton");
+
+            MyButton.onclick = () => {
+                // divs[i].style.backgroundColor = "red";
+                $("#MyButton").slideDwon(2000, () => {
+                    alert('slideDown')
+                    // })
+                    // $('.div').slideDwon(2000, () => {
+                    //     alert('slideDown')
+                    // })
+                })
+
+                $('#TestDiv1').slideDown(2000, () => {
+                    alert('slideDown')
+                })
+
+            }
+        })
+
     </script>
 </head>
 
 <body>
-    <button id="MyButton">让div中颜色变红</button>
+    <button id="MyButton">Test Btn</button>
     <!-- 五个div -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div id="TestDiv1"></div>
 </body>
 
 </html>

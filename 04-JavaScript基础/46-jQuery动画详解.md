@@ -233,9 +233,9 @@ $(selector).toggle();
     <script>
         $(function () {
             //点击按钮后产生动画
-            $("button:eq(0)").click(function () {
+            // $("button:eq(0)").click(function () {
 //                //淡入动画用法1:   fadeIn();   不加参数
-                $("div").fadeIn();
+                // $("div").fadeIn();
 
 //                //淡入动画用法2:   fadeIn(2000);   毫秒值
 //                $("div").fadeIn(2000);
@@ -250,10 +250,10 @@ $(selector).toggle();
 //                $("div").fadeIn(5000,function () {
 //                    alert("动画执行完毕！");
 //                });
-            })
+            // })
 
             //滑出动画
-            $("button:eq(1)").click(function () {
+            // $("button:eq(1)").click(function () {
 //                //滑出动画用法1:   fadeOut();   不加参数
 //                $("div").fadeOut();
 
@@ -270,21 +270,21 @@ $(selector).toggle();
 //                $("div").fadeOut(2000,function () {
 //                    alert("动画执行完毕！");
 //                });
-            })
+            // })
 
-            $("button:eq(2)").click(function () {
-                //滑入滑出切换
-                //同样有四种用法
-                $("div").fadeToggle(1000);
-            })
+            // $("button:eq(2)").click(function () {
+            //     //滑入滑出切换
+            //     //同样有四种用法
+            //     $("div").fadeToggle(1000);
+            // })
 
-            $("button:eq(3)").click(function () {
-                //改透明度
-                //同样有四种用法
-                $("div").fadeTo(1000, 0.5, function () {
-                    alert(1);
-                });
-            })
+            // $("button:eq(3)").click(function () {
+            //     //改透明度
+            //     //同样有四种用法
+            //     $("div").fadeTo(1000, 0.5, function () {
+            //         alert(1);
+            //     });
+            // })
         })
     </script>
 </head>
