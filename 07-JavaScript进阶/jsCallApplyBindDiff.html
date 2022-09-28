@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diff of Apply Bind And Diff</title>
+</head>
+
+<body>
+    <script>
+        var person1 = {
+            name: "小王",
+            gender: "男",
+            age: 24,
+            say: function (school, grade) {
+                console.log(this.name + " , " + this.gender + " ,今年" + this.age + " ,在" + school + "上" + grade);
+            }
+        }
+        var person2 = {
+            name: "小红",
+            gender: "女",
+            age: 18
+        }
+
+        person1.say.call(person2, "实验小学", "六年级");
+        person1.say.apply(person1, ["实验小学", "六年级"]);
+    </script>
+</body>
+
+</html>

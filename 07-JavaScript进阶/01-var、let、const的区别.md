@@ -17,12 +17,13 @@ title: 01-var、let、const的区别
 var a = '我是a';
 console.log(a); // 打印结果：我是a
 console.log(window.a); // 打印结果：我是a
+//这意味着var定义的变量将进入window对象
 ```
 
 ```js
 let b = '我是b';
 console.log(b); // 打印结果：我是b
-console.log(window.b); // 打印结果：undefined
+console.log(window.b); // 打印结果：undefined，这意味着let定义的变量不会进入window对象
 ```
 
 ```js

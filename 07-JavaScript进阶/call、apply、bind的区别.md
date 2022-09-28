@@ -58,7 +58,7 @@ call()和apply()方法都可以将实参在对象之后依次传递，但是appl
 比如针对下面这样的代码：
 
 ```javascript
-    var persion1 = {
+    var person1 = {
         name: "小王",
         gender: "男",
         age: 24,
@@ -76,13 +76,13 @@ call()和apply()方法都可以将实参在对象之后依次传递，但是appl
 如果是通过call的参数进行传参，是这样的：
 
 ```javascript
-	persion1.say.call(persion2, "实验小学", "六年级");
+	person1.say.call(person2, "实验小学", "六年级");
 ```
 
 如果是通过apply的参数进行传参，是这样的：
 
 ```javascript
-	persion1.say.apply(persion2, ["实验小学", "六年级"]);
+	person1.say.apply(person2, [ "实验小学", "六年级"]);
 ```
 
 看到区别了吗，call后面的实参与say方法中是一一对应的，而apply传实参时，要封装成一个数组，数组中的元素是和say方法中一一对应的，这就是两者最大的区别。
