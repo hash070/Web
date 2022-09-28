@@ -8,10 +8,10 @@
     <title>JSTest</title>
     <script>
         window.onload = function () {
-            var btn = document.getElementById("btn");
-            btn.onclick = function () {
-                alert("Hello World!");
-            }
+            // var btn = document.getElementById("btn");
+            // btn.onclick = function () {
+            //     alert("Hello World!");
+            // }
         }
     </script>
 </head>
@@ -45,68 +45,118 @@
     <!-- JS在body中按照从上到下顺序执行，直接放到head中不会执行 -->
     <!-- 使用window.onload可以在网页加载完成后，在head中定义网页元素操作 -->
 
-<script>
-    console.log("Hello Log");
-    console.warn("Hello Warn");
-    console.error("Hello Error");
-</script>
+    <script>
+        console.log("Hello Log");
+        console.warn("Hello Warn");
+        console.error("Hello Error");
+    </script>
 
-<p>流程控制</p>
-<script>
-    var a = 10;
-    var b = 20;
-    if (a > b) {
-        console.log("a>b");
-    } else if (a == b) {
-        console.log("a==b");
-    } else {
-        console.log("a<b");
-    }
+    <p>流程控制</p>
+    <script>
+        var a = 10;
+        var b = 20;
+        if (a > b) {
+            console.log("a>b");
+        } else if (a == b) {
+            console.log("a==b");
+        } else {
+            console.log("a<b");
+        }
 
-    var c = 10;
-    switch (c) {
-        case 1:
-            console.log("c=1");
-            break;
-        case 2:
-            console.log("c=2");
-            break;
-        case 3:
-            console.log("c=3");
-            break;
-        default:
-            console.log("c!=1,2,3");
-            break;
-    }
+        var c = 10;
+        switch (c) {
+            case 1:
+                console.log("c=1");
+                break;
+            case 2:
+                console.log("c=2");
+                break;
+            case 3:
+                console.log("c=3");
+                break;
+            default:
+                console.log("c!=1,2,3");
+                break;
+        }
 
-    var d = 10;
-    while (d > 0) {
-        console.log(d);
-        d--;
-    }
+        var d = 10;
+        while (d > 0) {
+            console.log(d);
+            d--;
+        }
 
-    var e = 10;
-    do {
-        console.log(e);
-        e--;
-    } while (e > 0);
+        var e = 10;
+        do {
+            console.log(e);
+            e--;
+        } while (e > 0);
 
-    for (var f = 0; f < 10; f++) {
-        console.log(f);
-    }
+        for (var f = 0; f < 10; f++) {
+            console.log(f);
+        }
 
-    var g = 10;
-    for (; g > 0; g--) {
-        console.log(g);
-    }
+        var g = 10;
+        for (; g > 0; g--) {
+            console.log(g);
+        }
 
-    var h = 10;
-    for (; h > 0;) {
-        console.log(h);
-        h--;
-    }
-</script>
+        var h = 10;
+        for (; h > 0;) {
+            console.log(h);
+            h--;
+        }
+    </script>
 
+    <p>函数</p>
+    <script>
+        // 普通函数
+        function add(a, b) {
+            return a + b;
+        }
+        console.log(add(1, 2));
+
+        function add2(a, b) {
+            if (a == undefined) {
+                a = 0;
+            }
+            if (b == undefined) {
+                b = 0;
+            }
+            return a + b;
+        }
+        console.log('1+3=' + add2(1, 3));
+
+        function add3(a, b) {
+            a = a || 0;
+            b = b || 0;
+            return a + b;
+        }
+        console.log(add3(1));
+
+        function add4(a, b) {
+            a = a == undefined ? 0 : a;
+            b = b == undefined ? 0 : b;
+            return a + b;
+        }
+        console.log(add4(1));
+
+        function add5(a, b) {
+            a = a || 0;
+            b = b || 0;
+            return a + b;
+        }
+        console.log(add5(1));
+
+        // 匿名函数
+
+        var btn = document.getElementById("btn");
+
+        btn.onclick = function () {
+            alert("Hello Anynumous Function!");
+        }
+    </script>
+    
+    <p></p>
 </body>
 
 </html>
