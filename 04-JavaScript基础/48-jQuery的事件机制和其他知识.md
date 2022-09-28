@@ -126,7 +126,10 @@ publish: true
             background-color: yellow;
         }
     </style>
-    <script src="jquery-1.11.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+    </script>
+
     <script>
         $(function () {
             //距离页面最顶端或者最左侧的距离和有没有定位没有关系
