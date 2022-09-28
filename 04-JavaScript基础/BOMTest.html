@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMTest</title>
+</head>
+<body>
+    <p id="TestText">Test</p>
+    <script>
+        var TestText = document.getElementById("TestText");
+        TestText.innerHTML = location.href;
+        // location.href = "https://www.baidu.com";
+
+        //重载页面
+        // location.reload();
+
+        //强制重载页面（不带缓存）
+        // location.reload(true);
+    </script>
+</body>
+</html>
